@@ -6,8 +6,96 @@
 	<link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
+
 	<!-- the entire body must be written by student -->
+	<title>Job Application Form</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f4f7fa; }
+        form {
+            background: #fff;
+            max-width: 450px;
+            margin: 40px auto;
+            padding: 28px;
+            border-radius: 8px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+        }
+        label {
+            display: block;
+            margin-bottom: 7px;
+            margin-top: 15px;
+        }
+        input, select {
+            width: 100%;
+            margin-bottom: 14px;
+            padding: 7px;
+            border: 1px solid #bbb;
+            border-radius: 4px;
+        }
+        .gender-radio input {
+            width: auto;
+            margin-right: 5px;
+        }
+        .gender-radio label {
+            display: inline;
+            margin-right: 15px;
+        }
+        button, input[type="submit"] {
+            background: #4257b2;
+            color: #fff;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 18px;
+        }
+        button:hover, input[type="submit"]:hover {
+            background: #23306a;
+        }
+    </style>
+</head>
+<body>
+    <form method="POST">
+        <label for="name">Name</label>
+        <input id="name" type="text" required />
+
+        <label for="email">Email</label>
+        <input id="email" type="email" required />
+
+        <label>Gender*</label>
+        <div class="gender-radio">
+            <input type="radio" id="male" name="gender" value="male" required />
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female" required />
+            <label for="female">Female</label>
+            <input type="radio" id="other" name="gender" value="other" required />
+            <label for="other">Other</label>
+        </div>
+
+        <label for="laptop">Laptop Brands*</label>
+        <select id="laptop" >
+            <option value="">Select Brand</option>
+            <option value="apple">Apple</option>
+            <option value="asus">Asus</option>
+            <option value="hp">HP</option>
+        </select>
+
+        <label for="age">Age*</label>
+        <input id="age" type="number" required />
+
+        <label for="dob">Date of Birth*</label>
+        <input id="dob" type="date" required />
+
+        <label for="password">Password*</label>
+        <input id="password" type="password" required />
+
+        <label for="portfolio">Portfolio URL*</label>
+        <input id="portfolio" type="url"  />
+
+        <input id="submit" type="submit" value="Submit" />
+    </form>
+
+
     <script type="text/javascript" src="./script.js">
 </script>
 
